@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery | NLP Sales LLC — Share Our Story</title>
+  <meta name="description" content="Browse and share NLP Sales marketing images. Help spread the word about surplus funds — real families, real checks, real results." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <style>
+    .filter-bar { display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin-bottom:2rem; }
+    .filter-btn { padding:.4rem 1rem; border-radius:20px; border:2px solid var(--green); background:transparent; color:var(--green); font-weight:600; cursor:pointer; font-size:.85rem; transition:all .2s; }
+    .filter-btn.active, .filter-btn:hover { background:var(--green); color:var(--white); }
+    .masonry { columns:4; gap:1rem; }
+    @media(max-width:1024px){.masonry{columns:3}}
+    @media(max-width:768px){.masonry{columns:2}}
+    @media(max-width:480px){.masonry{columns:1}}
+    .masonry-item { break-inside:avoid; margin-bottom:1rem; position:relative; border-radius:var(--radius); overflow:hidden; cursor:pointer; }
+    .masonry-item img { width:100%; display:block; transition:transform .3s; }
+    .masonry-item:hover img { transform:scale(1.03); }
+    .masonry-item__overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.75)); color:#fff; padding:1rem .75rem .6rem; opacity:0; transition:opacity .2s; font-size:.8rem; font-weight:600; }
+    .masonry-item:hover .masonry-item__overlay { opacity:1; }
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:1000; align-items:center; justify-content:center; padding:1rem; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:90vh; border-radius:var(--radius); }
+    .lightbox__close { position:absolute; top:1rem; right:1.5rem; color:#fff; font-size:2rem; cursor:pointer; line-height:1; background:none; border:none; }
+    .lightbox__download { position:absolute; bottom:1.5rem; right:1.5rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="nav__logo"><a href="index.html"><span class="logo-text">NLP <span class="logo-accent">Sales</span></span><span class="logo-tagline">Finding Funds. Changing Lives.</span></a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="espanol.html">Español</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="btn btn--nav">Contact Us</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <section class="page-hero page-hero--dark">
+    <div class="container">
+      <h1>Share Our Story</h1>
+      <p>Help someone you know find money that may be rightfully theirs. Share these images on Facebook, Instagram, WhatsApp, or anywhere.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-cat="all">All Images</button>
+        <button class="filter-btn" data-cat="seniors">Seniors</button>
+        <button class="filter-btn" data-cat="checks">Real Checks</button>
+        <button class="filter-btn" data-cat="spanish">Español</button>
+        <button class="filter-btn" data-cat="faith">Faith</button>
+        <button class="filter-btn" data-cat="process">Process</button>
+        <button class="filter-btn" data-cat="stats">Statistics</button>
+      </div>
+
+      <div class="masonry" id="galleryGrid">
+
+        <!-- REAL CHECKS -->
+        <div class="masonry-item" data-cat="checks"><img src="images/real-check-delivery-photo.png" alt="Nelson Perez delivers $42,850 check to the Johnson Family" /><div class="masonry-item__overlay">Real Check Delivery — $42,850</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/check-delivery-real-results.png" alt="Real check delivery $48,327" /><div class="masonry-item__overlay">$48,327 Recovered</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/families-celebrate-check.png" alt="Families celebrate $18,750 check" /><div class="masonry-item__overlay">$18,750 — Families Celebrate</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/from-tax-sale-big-check.jpg" alt="From Tax Sale to Big Check $42,850" /><div class="masonry-item__overlay">From Tax Sale to Big Check</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/surplus-check-arrived.jpg" alt="Surplus Check Arrived $25,750" /><div class="masonry-item__overlay">Your Surplus Check Just Arrived!</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/johnson-family-check-23k.png" alt="Johnson Family $23,650" /><div class="masonry-item__overlay">Johnson Family — $23,650</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/unexpected-money-check.png" alt="Unexpected Money $48,735" /><div class="masonry-item__overlay">Unexpected Money — $48,735</div></div>
+        <div class="masonry-item" data-cat="checks"><img src="images/owed-thousands-office-meeting.png" alt="NLP Sales office claim summary $18,750" /><div class="masonry-item__overlay">Office Meeting — $18,750 Found</div></div>
+
+        <!-- SENIORS -->
+        <div class="masonry-item" data-cat="seniors"><img src="images/seniors-surprise-check-clean.png" alt="Many Seniors Don't Know They Have Surplus Funds" /><div class="masonry-item__overlay">Many Seniors Don't Know</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/seniors-surprise-check-colorful.png" alt="A Surprise Check Could Be Coming Your Way" /><div class="masonry-item__overlay">A Surprise Check Is Coming</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/seniors-surprise-check-3.png" alt="Seniors Surprise Check 3" /><div class="masonry-item__overlay">Help Seniors Claim What's Theirs</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/peace-of-mind-mission.png" alt="Your Peace of Mind Our Mission" /><div class="masonry-item__overlay">Your Peace of Mind — Our Mission</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/money-waiting-couple-bench.png" alt="You may have money waiting for you" /><div class="masonry-item__overlay">Money May Be Waiting</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/money-waiting-couple-colorful.png" alt="You May Have Money Waiting" /><div class="masonry-item__overlay">Finding Funds. Changing Lives.</div></div>
+        <div class="masonry-item" data-cat="seniors"><img src="images/seniors-shocked-notice.png" alt="Seniors shocked by notice" /><div class="masonry-item__overlay">Money Could Be Waiting For You</div></div>
+
+        <!-- SPANISH -->
+        <div class="masonry-item" data-cat="spanish"><img src="images/spanish-ad-landscape.png" alt="NLP Sales en Español" /><div class="masonry-item__overlay">Recuperamos Fondos Excedentes</div></div>
+        <div class="masonry-item" data-cat="spanish"><img src="images/spanish-unexpected-money.png" alt="Dinero Inesperado Esperanza Real" /><div class="masonry-item__overlay">Dinero Inesperado. Esperanza Real.</div></div>
+        <div class="masonry-item" data-cat="spanish"><img src="images/spanish-landscape-farm.png" alt="NLP Sales Español — Impuestos Pagados de Más" /><div class="masonry-item__overlay">Impuestos Pagados de Más</div></div>
+        <div class="masonry-item" data-cat="spanish"><img src="images/spanish-ad-vertical.jpg" alt="NLP Sales SALP Spanish vertical" /><div class="masonry-item__overlay">Su Dinero Es Nuestra Misión</div></div>
+
+        <!-- FAITH -->
+        <div class="masonry-item" data-cat="faith"><img src="images/you-are-never-alone.png" alt="You Are Never Alone — Psalm 34" /><div class="masonry-item__overlay">You Are Never Alone — Psalm 34:17</div></div>
+        <div class="masonry-item" data-cat="faith"><img src="images/have-faith-spiritual.png" alt="Do Not Close Your Ears Have Faith" /><div class="masonry-item__overlay">Have Faith. He Delivers.</div></div>
+        <div class="masonry-item" data-cat="faith"><img src="images/door-god-opened-faith.png" alt="The Door God Opened For You" /><div class="masonry-item__overlay">This Could Be The Door God Opened</div></div>
+        <div class="masonry-item" data-cat="faith"><img src="images/money-is-coming-angel.png" alt="Money Is Coming — Believe Visualize Act" /><div class="masonry-item__overlay">Believe. Visualize. Act. Receive.</div></div>
+        <div class="masonry-item" data-cat="faith"><img src="images/assume-feeling-wish-fulfilled.png" alt="Assume the Feeling of the Wish Fulfilled" /><div class="masonry-item__overlay">Assume the Feeling of the Wish Fulfilled</div></div>
+
+        <!-- PROCESS -->
+        <div class="masonry-item" data-cat="process"><img src="images/nlp-process-infographic.png" alt="The NLP Sales 10-Step Process" /><div class="masonry-item__overlay">Our 10-Step Process</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/step-1-research.png" alt="Step 1 Research" /><div class="masonry-item__overlay">Step 1: Research</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/mobile-notary-signing.png" alt="Mobile Notary Signing" /><div class="masonry-item__overlay">Step 6: Mobile Notary</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/electronic-filing-process.png" alt="Electronic Filing" /><div class="masonry-item__overlay">Electronic Filing</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/research-team-professional.png" alt="Research Team" /><div class="masonry-item__overlay">Research Team</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/surplus-funds-take-time-colorful.png" alt="Surplus Funds Take Time" /><div class="masonry-item__overlay">Trust the Process</div></div>
+        <div class="masonry-item" data-cat="process"><img src="images/we-search-verify-help.png" alt="We Search We Verify We Help" /><div class="masonry-item__overlay">We Search. We Verify. We Help.</div></div>
+
+        <!-- STATS -->
+        <div class="masonry-item" data-cat="stats"><img src="images/surveys-polls-surplus-funds.png" alt="Surveys & Polls — Truth About Surplus Funds" /><div class="masonry-item__overlay">68% Don't Know About Surplus Funds</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/human-impact-polls.png" alt="Human Impact Polls" /><div class="masonry-item__overlay">Real People Behind Surplus Funds</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/governments-holding-billions.png" alt="State Governments Holding Billions" /><div class="masonry-item__overlay">Billions Held by State Governments</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/which-would-you-choose-29k.png" alt="Which Would You Choose — $29,000?" /><div class="masonry-item__overlay">Would You Claim $29,000?</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/what-would-you-choose-letter.png" alt="What Would You Choose — Ignore or Call?" /><div class="masonry-item__overlay">Ignore the Letter or Make One Call?</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/why-people-never-claim.png" alt="Why People Never Claim Surplus Funds" /><div class="masonry-item__overlay">Why People Never Claim</div></div>
+        <div class="masonry-item" data-cat="stats"><img src="images/believer-vs-non-believer.png" alt="The Believer vs The Non-Believer" /><div class="masonry-item__overlay">The Believer vs The Non-Believer</div></div>
+
+        <!-- URGENCY / GENERAL -->
+        <div class="masonry-item" data-cat="all"><img src="images/lose-property-money-behind.png" alt="Did You Lose a Property But Leave Money Behind?" /><div class="masonry-item__overlay">You Lost the Property — Not the Money</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/struggling-pay-bills.png" alt="Struggling to Pay Bills?" /><div class="masonry-item__overlay">Before You Borrow — Check This</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/money-waiting-cash-red.png" alt="Thousands of Dollars Unclaimed" /><div class="masonry-item__overlay">Thousands Unclaimed</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/money-waiting-mailbox.png" alt="Unclaimed Funds Notice in Mailbox" /><div class="masonry-item__overlay">Don't Ignore That Notice</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/ask-me-surplus-funds-green.png" alt="Ask Me About Surplus Funds" /><div class="masonry-item__overlay">Ask Me About Surplus Funds</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/lost-house-not-money.jpg" alt="They Lost Their House Not Their Money" /><div class="masonry-item__overlay">They Lost the House. Not the Money.</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/funny-quotes-bundle-nlp.png" alt="Surplus Funds Funny Quotes Bundle" /><div class="masonry-item__overlay">Surplus Funds Funny Quotes</div></div>
+        <div class="masonry-item" data-cat="all"><img src="images/surplus-funds-news-front-page.png" alt="Surplus Funds News — Millions Unclaimed" /><div class="masonry-item__overlay">Millions Still Unclaimed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <a id="lightboxDownload" href="" download class="btn btn--primary lightbox__download">⬇ Download Image</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">NLP <span style="color:var(--gold)">Sales</span></div>
+      <div class="footer__phones">
+        <a href="tel:6562397809">📞 656-239-7809</a>
+        <a href="tel:8134865161">📞 813-486-5161</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 NLP Sales LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Filter
+    const btns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.masonry-item');
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      items.forEach(item => {
+        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+      });
+    }));
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbDl = document.getElementById('lightboxDownload');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.querySelector('img').src;
+        lbImg.src = src;
+        lbDl.href = src;
+        lb.classList.add('open');
+      });
+    });
+    document.getElementById('lightboxClose').addEventListener('click', () => lb.classList.remove('open'));
+    lb.addEventListener('click', e => { if(e.target === lb) lb.classList.remove('open'); });
+  </script>
+</body>
+</html>

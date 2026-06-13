@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surplusfundsnlp.me/sitemap.xml
+
+# Block access to source files and development files
+Disallow: /email-sequence/
+Disallow: /scripts/
+Disallow: /content-plan/
+Disallow: /social-media/
+Disallow: /youtube-seo/
