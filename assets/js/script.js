@@ -65,10 +65,25 @@
       note.classList.remove('is-error');
       note.textContent = '';
 
+      var formValues = Object.fromEntries(new FormData(form));
+
+      // Best-effort HubSpot sync — only live once /api/submit-lead is
+      // deployed (see api/submit-lead.js). Runs in parallel and never blocks
+      // or affects the visitor-facing result below, which depends on
+      // Web3Forms alone.
+      fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formValues)
+      }).catch(function () {
+        /* no serverless functions on this host, or HubSpot isn't configured
+           yet — Web3Forms below still delivers the lead by email. */
+      });
+
       fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        body: JSON.stringify(formValues)
       })
         .then(function (response) { return response.json(); })
         .then(function (result) {

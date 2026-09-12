@@ -33,7 +33,17 @@ The form already POSTs to [Web3Forms](https://web3forms.com) — a free service 
 
 Until step 2 is done, submitting the form shows a message telling the visitor it isn't connected yet instead of silently failing.
 
-Want submissions to also land as CRM contacts (e.g. HubSpot) instead of/alongside email? That's a separate integration — ask and it can be added.
+## Also syncing leads to HubSpot as CRM contacts (optional)
+
+`api/submit-lead.js` creates/updates a HubSpot contact — plus a note with the service type, urgency, and case details — for every submission, in addition to the Web3Forms email above. It runs server-side so your HubSpot token is never exposed in the site's public JavaScript.
+
+This requires a host with serverless functions (**Vercel** or **Netlify** — not a plain static host like GitHub Pages). Setup:
+
+1. In HubSpot: **Settings → Integrations → Private Apps → Create a private app**, grant it the `crm.objects.contacts.write` and `crm.objects.notes.write` scopes, and copy the access token.
+2. In your hosting provider's project settings, add an environment variable: `HUBSPOT_PRIVATE_APP_TOKEN` = *(that token)*.
+3. Deploy. The endpoint is live at `/api/submit-lead`, and the form (`assets/js/script.js`) already calls it automatically alongside Web3Forms.
+
+If this endpoint isn't deployed or isn't configured, the site keeps working exactly as before — the front end calls it best-effort and silently ignores a failure, since Web3Forms alone already guarantees the email lands.
 
 ## Deploying
 
