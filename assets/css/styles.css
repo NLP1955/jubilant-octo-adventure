@@ -433,6 +433,8 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(201, 151, 63, 0.2);
 }
 .form-note { min-height: 1.4em; font-size: 0.9rem; color: var(--color-success-text); font-weight: 600; margin: 12px 0 0; }
+.form-note.is-error { color: #b3261e; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* ---------- footer ---------- */
 .site-footer { background: var(--color-navy-dark); color: rgba(255,255,255,0.75); padding-top: 56px; }

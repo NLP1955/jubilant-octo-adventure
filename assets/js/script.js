@@ -30,9 +30,13 @@
   }
 
   // ---------- contact form ----------
-  // NOTE: This form is front-end only right now. Before going live, wire the
-  // submit handler below to a real endpoint — e.g. a form backend such as
-  // Formspree/Netlify Forms, or your own API route that emails/stores leads.
+  // Submissions are delivered by Web3Forms (https://web3forms.com) directly
+  // to your inbox — no backend to run. Get a free access key at
+  // web3forms.com (just enter the email you want leads sent to, no account
+  // or password required) and paste it into the hidden "access_key" field
+  // in index.html, replacing YOUR_WEB3FORMS_ACCESS_KEY.
+  var WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
   var form = document.getElementById('contact-form');
   var note = document.getElementById('form-note');
 
@@ -45,10 +49,47 @@
         return;
       }
 
-      // Placeholder success state — replace with a real fetch() call to your
-      // form backend once one is connected.
-      note.textContent = 'Thanks — your request was received. We will reach out within one business hour.';
-      form.reset();
+      var accessKey = form.elements['access_key'] ? form.elements['access_key'].value : '';
+      if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+        note.textContent = 'This form isn’t connected yet — add a Web3Forms access key in index.html to start receiving leads by email.';
+        note.classList.add('is-error');
+        return;
+      }
+
+      var submitButton = form.querySelector('button[type="submit"]');
+      var originalLabel = submitButton ? submitButton.textContent : '';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+      }
+      note.classList.remove('is-error');
+      note.textContent = '';
+
+      fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      })
+        .then(function (response) { return response.json(); })
+        .then(function (result) {
+          if (result && result.success) {
+            note.textContent = 'Thanks — your request was received. We will reach out within one business hour.';
+            form.reset();
+          } else {
+            note.textContent = 'Something went wrong sending your request — please call us instead.';
+            note.classList.add('is-error');
+          }
+        })
+        .catch(function () {
+          note.textContent = 'Something went wrong sending your request — please call us instead.';
+          note.classList.add('is-error');
+        })
+        .finally(function () {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalLabel;
+          }
+        });
     });
   }
 })();

@@ -23,12 +23,17 @@ Search the files for the following and swap in real info:
 | `[License #]` / `[State]` | footer | your license number and state(s) served |
 | Testimonial quotes | `#testimonials` section in `index.html` | real client testimonials (marked with an HTML comment in the file) |
 
-## Wiring up the contact form
+## Connecting the contact form (1 step, ~1 minute)
 
-The form in `#contact` currently validates and shows a success message client-side only — it does not send anywhere yet. Pick one:
+The form already POSTs to [Web3Forms](https://web3forms.com) — a free service that emails you every submission. No account, password, or backend required:
 
-- **Form service (fastest):** point the form at [Formspree](https://formspree.io) or [Netlify Forms](https://docs.netlify.com/forms/setup/) — a few lines of markup/JS, no backend to run.
-- **Your own backend:** replace the `fetch`-free placeholder in `assets/js/script.js`'s submit handler with a real `fetch()` call to your API route, which can email the lead, save it to a database, or push it into a CRM.
+1. Go to **https://web3forms.com/**, enter the email address you want leads sent to, and click "Create Access Key". You'll get a key instantly.
+2. Open `index.html`, find `YOUR_WEB3FORMS_ACCESS_KEY` (in the hidden `access_key` field near the top of the `<form id="contact-form">`), and replace it with your key.
+3. Deploy. Every form submission now arrives by email — recipient name, phone, service type, urgency, and case details included.
+
+Until step 2 is done, submitting the form shows a message telling the visitor it isn't connected yet instead of silently failing.
+
+Want submissions to also land as CRM contacts (e.g. HubSpot) instead of/alongside email? That's a separate integration — ask and it can be added.
 
 ## Deploying
 
