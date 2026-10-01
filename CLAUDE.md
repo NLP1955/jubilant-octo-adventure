@@ -84,20 +84,29 @@ We help property owners claim unclaimed surplus funds from foreclosure sales, ta
 
 ---
 
-## Airtable — Surplus Funds Case Tracker (To Build After Re-auth)
+## Airtable — Surplus Funds Case Tracker ✅ BUILT
 
-### Tables Needed
-| Table | Purpose |
-|---|---|
-| Leads | Property owners identified with potential surplus funds |
-| Cases | Active surplus fund recovery cases |
-| Counties | County-level filing rules, deadlines, contacts |
-| Marketing Campaigns | Outreach batches, mailer sends, follow-up tracking |
+**Base:** NLP Sales — Surplus Funds Tracker
+**Base ID:** appaX6g20FsSdWsAe
 
-### Key Fields for Leads Table
-- Owner Name, Property Address, County / State
-- Surplus Fund Amount ($), Source, Outreach Status
-- Filing Deadline, HubSpot Deal ID
+| Table | Table ID | Purpose |
+|---|---|---|
+| Leads | tblLRl3XlseyKI2QM | Property owners with potential surplus funds |
+| Cases | tbluGNv3TMsgSZJOo | Active surplus fund recovery cases |
+| Counties | tbl4PyMAhUTkWQ7GQ | County filing rules, deadlines, contacts |
+| Marketing Campaigns | tbl49yJhaYJ4NVtvD | Outreach batches and campaign tracking |
+
+### Leads Table Fields
+- Owner Name, Property Address, County, State
+- Surplus Amount ($), Source (Tax Sale / County Record / Skip Trace / Referral)
+- Outreach Status (Not Contacted → Mailer Sent → Called → Responded)
+- Filing Deadline, Phone, Email, HubSpot Deal ID, Notes
+
+### Cases Table Fields
+- Case ID, Client Name, Property Address, County, State
+- Surplus Amount ($), Our Fee %, Expected Fee ($)
+- Case Status (9-stage pipeline matching HubSpot)
+- Docusign Sent Date, Claim Filed Date, Filing Deadline, Notes
 
 ---
 
