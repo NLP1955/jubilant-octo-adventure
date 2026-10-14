@@ -1,0 +1,32 @@
+{
+  "counties": [
+    {
+      "name": "Sample County",
+      "enabled": true,
+      "format": "csv",
+      "url": "sample_data/surplus_lists/day2/sample_county.csv",
+      "columns": {
+        "case_number": "Tax Deed #",
+        "parcel_id": "Parcel",
+        "owner_name": "Former Owner",
+        "amount": "Surplus Balance",
+        "sale_date": "Date of Sale",
+        "address": "Property Address"
+      }
+    },
+    {
+      "name": "Other County",
+      "enabled": true,
+      "format": "html",
+      "url": "sample_data/surplus_lists/day2/other_county.html",
+      "table_selector": "table.surplus",
+      "columns": {
+        "case_number": "Case Number",
+        "parcel_id": "Parcel ID",
+        "owner_name": "Owner of Record",
+        "amount": "Amount Available",
+        "sale_date": "Sale Date"
+      }
+    }
+  ]
+}
