@@ -1,0 +1,7 @@
+case_number,county,parcel_id,sale_date,property_type,situs_address,owner_name,owner_mailing_state,owner_deceased,homestead,opening_bid,just_market_value,estimated_market_value,known_liens
+2026-TD-001101,Sample County,01-2345-000-0010,10/22/2026,Single Family,"101 Example Rd, Sampletown FL",EXAMPLE OWNER A,FL,N,Y,"$98,400","$280,000","$315,000",$0
+2026-TD-001102,Sample County,01-2345-000-0020,10/22/2026,Condo,"202 Demo Ave #4B, Sampletown FL",EXAMPLE OWNER B,NY,N,N,"$11,250","$190,000",,"$14,800"
+2026-TD-001103,Sample County,01-2345-000-0030,11/05/2026,Vacant Land,"Lot 7 Test Blvd, Sampletown FL",EXAMPLE OWNER C,OH,N,N,"$3,900","$12,000",,$0
+2026-TD-001104,Sample County,01-2345-000-0040,11/05/2026,Single Family,"404 Mock St, Sampletown FL",ESTATE OF EXAMPLE OWNER D,FL,Y,N,"$7,600","$240,000","$255,000","$22,000"
+2026-TD-001105,Sample County,01-2345-000-0050,11/19/2026,Mobile Home,"505 Fake Ct, Sampletown FL",EXAMPLE OWNER E,FL,N,N,"$6,100","$9,000",,$0
+2026-TD-001106,Other County,02-0001-111-0060,12/03/2026,Townhouse,"606 Placeholder Way, Otherville FL",EXAMPLE OWNER F,GA,N,N,"$9,800","$210,000",,"$180,000"

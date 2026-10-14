@@ -1,0 +1,1817 @@
+{
+  "_readme": [
+    "One entry per county. Set 'url' to the county clerk's published tax deed surplus list",
+    "(search the clerk's site for 'surplus', 'excess proceeds', or 'unclaimed funds'),",
+    "set 'format' to csv, html or pdf, map 'columns' to that list's header names",
+    "(a list of names = try each), then set enabled to true.",
+    "Fields: case_number, parcel_id, owner_name, amount, sale_date, address.",
+    "Check each site's terms of use. Some counties only provide lists on request - use a",
+    "public records request and save the file locally, then point 'url' at the file path."
+  ],
+  "counties": [
+    {
+      "name": "Miami-Dade",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Broward",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Palm Beach",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Hillsborough",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Orange",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Pinellas",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Duval",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Lee",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Polk",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Brevard",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Volusia",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Pasco",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Seminole",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Sarasota",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Manatee",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Collier",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Osceola",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Marion",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Lake",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "St. Lucie",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Escambia",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Leon",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Alachua",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "St. Johns",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Clay",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Okaloosa",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Hernando",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Charlotte",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Citrus",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Bay",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Martin",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Indian River",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Santa Rosa",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Sumter",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Highlands",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Flagler",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Nassau",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Monroe",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Putnam",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Walton",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    },
+    {
+      "name": "Columbia",
+      "enabled": false,
+      "format": "csv",
+      "url": "TODO",
+      "columns": {
+        "case_number": [
+          "Case Number",
+          "Tax Deed Number",
+          "Tax Deed #",
+          "Case #"
+        ],
+        "parcel_id": [
+          "Parcel ID",
+          "Parcel",
+          "Parcel Number",
+          "Folio"
+        ],
+        "owner_name": [
+          "Owner",
+          "Owner Name",
+          "Former Owner",
+          "Owner of Record",
+          "Title Holder"
+        ],
+        "amount": [
+          "Surplus",
+          "Surplus Amount",
+          "Surplus Balance",
+          "Amount",
+          "Balance",
+          "Excess Proceeds"
+        ],
+        "sale_date": [
+          "Sale Date",
+          "Date of Sale"
+        ],
+        "address": [
+          "Property Address",
+          "Situs Address",
+          "Address"
+        ]
+      }
+    }
+  ]
+}
